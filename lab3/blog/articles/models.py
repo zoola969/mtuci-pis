@@ -17,4 +17,4 @@ class Article(models.Model):
         return f"{self.author.username}: {self.title}"
 
     def get_excerpt(self) -> str:
-        return self.text[:_MAX_EXCERPT_LENGTH] + "..." if len(self.text) > _MAX_EXCERPT_LENGTH else self.text
+        return self.text[:_MAX_EXCERPT_LENGTH] + ("..." if len(self.text) > _MAX_EXCERPT_LENGTH else "")

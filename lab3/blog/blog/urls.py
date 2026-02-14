@@ -16,7 +16,8 @@ Including another URLconf
 
 """
 
+import articles.views
 from django.contrib import admin
 from django.urls import path
 
-urlpatterns = [path("admin/", admin.site.urls)]
+urlpatterns = [path("", articles.views.archive, name="archive"), path("admin/", admin.site.urls)]

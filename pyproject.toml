@@ -113,6 +113,9 @@ split-on-trailing-comma = false
 [tool.ruff.lint.pep8-naming]
 
 [tool.ruff.lint.per-file-ignores]
+"*/migrations/*.py" = [
+    "RUF012",  # Mutable default value for class attribute
+]
 "lab1/groupmates.py" = [
     "T201",
 ]
