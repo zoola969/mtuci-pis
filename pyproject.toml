@@ -1,0 +1,141 @@
+[dependency-groups]
+dev = [
+    "black>=26.1",
+    "django-stubs[compatible-mypy]~=5.2",
+    "mypy~=1.19",
+    "pre-commit~=4.5",
+]
+
+[project]
+dependencies = [
+    "django-environ~=0.12",
+    "django~=5.2",
+]
+description = "Add your description here"
+name = "mtuci-pis"
+requires-python = ">=3.14"
+version = "0.1.0"
+
+[tool.black]
+line-length = 120
+
+[tool.ruff]
+line-length = 120
+output-format = "full"
+show-fixes = true
+src = ["src"]
+
+[tool.ruff.format]
+docstring-code-format = true
+docstring-code-line-length = 80
+skip-magic-trailing-comma = true
+
+[tool.ruff.lint]
+extend-safe-fixes = [
+    "ANN201",
+    "ANN202",
+    "ANN204",
+    "ANN205",
+    "ANN206",
+    "D205",
+    "D400",
+    "EM101",
+    "EM102",
+    "PGH004",
+    "PLR1714",
+    "PLR6201",
+    "PYI025",
+    "RET504",
+    "RSE102",
+    "SIM108",
+    "UP007",
+    "UP038",
+]
+fixable = ["ALL"]
+ignore = [
+    "A003",  # Class attribute {name} is shadowing a python builtin
+    "AIR",  # airflow
+    "COM812",  # missing trailing comma
+    "CPY",  # flake8-copyright
+    "D100",  # Missing docstring in public module
+    "D101",  # Missing docstring in public class
+    "D102",  # Missing docstring in public method
+    "D103",  # Missing docstring in public function
+    "D104",  # Missing docstring in public package
+    "D105",  # Missing docstring in magic method
+    "D106",  # Missing docstring in public nested class
+    "D107",  # Missing docstring in init
+    "D203",  # 1 blank line required before class docstring
+    "D213",  # Multi-line docstring summary should start at the second line
+    "DTZ",  # flake8-datetimez
+    "FIX002",  # Line contains TODO, consider resolving the issue
+    "INP001",  # implicit-namespace-package
+    "NPY",  # numpy rules
+    "PD",  # pandas-vet
+    "PLC1901",  # compare-to-empty-string
+    "PLR0913",  # Too many arguments to function call
+    "PYI041",  # redundant-numeric-union. Use float instead of int | float
+    "TC001",  # Move application import into a type-checking block
+    "TC002",  # Move third-party import into a type-checking block
+    "TC003",  # Move standard import into a type-checking block
+    "TD",  # flake8-todo
+]
+select = ["ALL"]
+
+[tool.ruff.lint.flake8-annotations]
+mypy-init-return = true
+
+[tool.ruff.lint.flake8-bugbear]
+extend-immutable-calls = [
+    "fastapi.Body",
+    "fastapi.Cookie",
+    "fastapi.Depends",
+    "fastapi.Header",
+    "fastapi.Path",
+    "fastapi.Query",
+]
+
+[tool.ruff.lint.flake8-comprehensions]
+allow-dict-calls-with-keyword-arguments = true
+
+[tool.ruff.lint.flake8-pytest-style]
+parametrize-values-type = "list"
+
+[tool.ruff.lint.flake8-type-checking]
+strict = true
+
+[tool.ruff.lint.flake8-unused-arguments]
+ignore-variadic-names = true
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+
+[tool.ruff.lint.pep8-naming]
+
+[tool.ruff.lint.per-file-ignores]
+"lab1/groupmates.py" = [
+    "T201",
+]
+"lab1/helloworld.py" = [
+    "T201",
+]
+
+[tool.tomlsort]
+all = true
+ignore_case = true
+in_place = true
+no_block_comments = false
+no_comments = false
+no_footer_comments = false
+no_header_comments = false
+no_inline_comments = false
+no_sort_tables = false
+sort_inline_arrays = true
+sort_inline_tables = true
+sort_table_keys = true
+spaces_before_inline_comment = 2
+spaces_indent_inline_array = 4
+trailing_comma_inline_array = true
+
+[tool.uv]
+package = false
