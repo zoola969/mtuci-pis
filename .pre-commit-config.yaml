@@ -19,3 +19,9 @@ repos:
       - id: toml-sort
         entry: toml-sort
         args: [pyproject.toml]
+
+  - repo: https://github.com/djlint/djLint
+    rev: v1.36.0
+    hooks:
+      - id: djlint
+      - id: djlint-reformat
