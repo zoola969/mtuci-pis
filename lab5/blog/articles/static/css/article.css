@@ -1,0 +1,97 @@
+.article-page h1 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
+.header {
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header img {
+    float: left;
+    width: 318px;
+}
+
+.all-articles {
+    float: right;
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.article-page, .archive-page {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.article-info {
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 18px;
+    clear: both;
+}
+
+.article-author {
+    float: left;
+    font-weight: bold;
+}
+
+.article-created-date {
+    float: right;
+}
+
+.article-text {
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.archive-page .header {
+    text-align: center;
+}
+
+.archive-page .header img {
+    float: none;
+    display: inline-block;
+}
+
+.post-title {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.post-title h2, .post-title h1, h2.post-title, h1.post-title {
+    margin: 0;
+    padding: 0;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    text-decoration: none;
+}
+
+.one-post {
+    margin-bottom: 60px;
+    clear: both;
+}

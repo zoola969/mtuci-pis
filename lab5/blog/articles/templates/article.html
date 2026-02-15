@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="{{ post.get_excerpt }}">
+        <meta name="keywords" content="блог, статьи, архив, публикации">
+        <title>{{ post.title }}</title>
+        <link rel="stylesheet" href="{% static 'css/article.css' %}">
+    </head>
+    <body class="article-page">
+        <header class="header">
+            <img src="{% static 'img/dpb-logo.png' %}"
+                 alt="Логотип проекта"
+                 height="auto"
+                 width="auto" />
+            <a href="{% url 'archive' %}" class="all-articles">Все статьи</a>
+        </header>
+        <main class="content">
+            <article class="one-post">
+                <h1 class="post-title">{{ post.title }}</h1>
+                <div class="article-info">
+                    <span class="article-author">{{ post.author.username }}</span>
+                    <time class="article-created-date"
+                          datetime="{{ post.created_date|date:'Y-m-d' }}">
+                        {{ post.created_date|date:"j E Y" }}
+                    </time>
+                </div>
+                <div class="article-text">{{ post.text|linebreaks }}</div>
+            </article>
+        </main>
+    </body>
+</html>
