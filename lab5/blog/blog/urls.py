@@ -22,6 +22,7 @@ from django.urls import path
 
 urlpatterns = [
     path("", articles.views.archive, name="archive"),
+    path("article/new/", articles.views.create_post, name="new_article"),
     path("article/<int:article_id>/", articles.views.get_article, name="get_article"),
     path("admin/", admin.site.urls),
 ]
