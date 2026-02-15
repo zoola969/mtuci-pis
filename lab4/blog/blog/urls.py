@@ -20,4 +20,8 @@ import articles.views
 from django.contrib import admin
 from django.urls import path
 
-urlpatterns = [path("", articles.views.archive, name="archive"), path("admin/", admin.site.urls)]
+urlpatterns = [
+    path("", articles.views.archive, name="archive"),
+    path("article/<int:article_id>/", articles.views.get_article, name="get_article"),
+    path("admin/", admin.site.urls),
+]
