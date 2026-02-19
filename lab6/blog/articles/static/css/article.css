@@ -1,0 +1,220 @@
+.article-page h1 {
+    color: #ffffff;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+body {
+    background: #1abc9c;
+    font-family: Tahoma, Arial, sans-serif;
+    color: #ffffff;
+    margin: 0;
+}
+
+.header {
+    padding: 20px 0;
+    overflow: hidden;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header img {
+    float: left;
+    width: 318px;
+}
+
+.all-articles {
+    float: right;
+    color: #ffffff;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.article-page, .archive-page, .create-post-page, .register-page, .login-page {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.article-page .header, .create-post-page .header, .register-page .header, .login-page .header, .archive-page .header {
+    text-align: center;
+    position: relative;
+    overflow: visible;
+}
+
+.article-page .header img, .create-post-page .header img, .register-page .header img, .login-page .header img, .archive-page .header img {
+    float: none;
+    display: inline-block;
+    width: 318px;
+}
+
+.header-links {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    text-align: right;
+}
+
+.header-links .all-articles {
+    position: static;
+    display: inline-block;
+    margin: 0 0 5px 20px;
+}
+
+.article-info {
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-style: italic;
+    font-size: 18px;
+    clear: both;
+}
+
+.article-author {
+    float: left;
+    font-weight: bold;
+}
+
+.article-created-date {
+    float: right;
+}
+
+.article-text {
+    line-height: 1.6;
+    font-size: 16px;
+    text-align: justify;
+    margin-top: 15px;
+}
+
+.archive-page .header {
+    text-align: center;
+}
+
+.archive-page .header img {
+    float: none;
+    display: inline-block;
+}
+
+.post-title {
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 2px;
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+.post-title h2, .post-title h1, h2.post-title, h1.post-title {
+    margin: 0;
+    padding: 0;
+}
+
+.post-title a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.post-title a:hover {
+    text-decoration: none;
+}
+
+.one-post {
+    margin-bottom: 60px;
+    clear: both;
+}
+
+.create-post-page h1.post-title {
+    color: #ffffff;
+    font-size: 36px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    display: inline-block;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 2px;
+}
+
+.create-post-page form {
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.create-post-page input[type="text"],
+.create-post-page input[type="email"],
+.create-post-page input[type="password"],
+.create-post-page textarea,
+.register-page input[type="text"],
+.register-page input[type="email"],
+.register-page input[type="password"],
+.register-page textarea,
+.login-page input[type="text"],
+.login-page input[type="password"] {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 20px;
+    box-sizing: border-box;
+    font-family: inherit;
+    transition: border-color 0.3s, background 0.3s;
+    margin-bottom: 5px;
+}
+
+.create-post-page input[type="text"]:focus,
+.create-post-page input[type="email"]:focus,
+.create-post-page input[type="password"]:focus,
+.create-post-page textarea:focus,
+.register-page input[type="text"]:focus,
+.register-page input[type="email"]:focus,
+.register-page input[type="password"]:focus,
+.register-page textarea:focus,
+.login-page input[type="text"]:focus,
+.login-page input[type="password"]:focus {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+}
+
+.create-post-page textarea {
+    height: 300px;
+    resize: vertical;
+}
+
+.create-post-page input::placeholder,
+.create-post-page textarea::placeholder,
+.register-page input::placeholder,
+.register-page textarea::placeholder,
+.login-page input::placeholder {
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.submit-button {
+    background: #ffffff;
+    color: #1abc9c;
+    border: none;
+    padding: 12px 60px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    float: right;
+    margin-top: 10px;
+}
+
+.submit-button:active {
+    transform: translateY(2px);
+}
+
+.submit-button:hover {
+    background: #f0f0f0;
+}
+
+.errors {
+    margin-top: 20px;
+    padding: 10px;
+    background: #e74c3c;
+    color: #ffffff;
+    border-radius: 4px;
+}
