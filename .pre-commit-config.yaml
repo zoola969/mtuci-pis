@@ -30,4 +30,6 @@ repos:
     rev: v2.4.2
     hooks:
       - id: biome-format
+        exclude: jquery\.js
       - id: biome-lint
+        exclude: jquery\.js

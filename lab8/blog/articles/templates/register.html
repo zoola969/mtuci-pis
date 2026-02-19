@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description"
+              content="Страница регистрации нового пользователя.">
+        <meta name="keywords" content="блог, регистрация, новый пользователь">
+        <title>Django Public Blog - регистрация</title>
+        <link rel="stylesheet" href="{% static 'css/article.css' %}">
+    </head>
+    <body class="register-page">
+        <header class="header">
+            <img src="{% static 'img/dpb-logo.png' %}"
+                 alt="Логотип проекта"
+                 height="auto"
+                 width="auto" />
+            <div class="header-links">
+                <a href="{% url 'archive' %}" class="all-articles">Все статьи</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'new_article' %}" class="all-articles">Написать статью</a>
+                    <a href="{% url 'logout' %}" class="all-articles">Выйти</a>
+                {% else %}
+                    <a href="{% url 'register' %}" class="all-articles">Регистрация</a>
+                    <a href="{% url 'login' %}" class="all-articles">Войти</a>
+                {% endif %}
+            </div>
+        </header>
+        <main class="content">
+            <h1 class="post-title">Регистрация</h1>
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-group">
+                    <input type="text"
+                           name="username"
+                           placeholder="Имя пользователя"
+                           value="{{ form.username|default:'' }}">
+                </div>
+                <div class="form-group">
+                    <input type="email"
+                           name="email"
+                           placeholder="Email"
+                           value="{{ form.email|default:'' }}">
+                </div>
+                <div class="form-group">
+                    <input type="password" name="password" placeholder="Пароль">
+                </div>
+                <div class="form-group">
+                    <input type="submit" value="Зарегистрироваться" class="submit-button">
+                </div>
+            </form>
+            {% if form.errors %}
+                <div class="errors">{{ form.errors }}</div>
+            {% elif form.error %}
+                <div class="errors">{{ form.error }}</div>
+            {% endif %}
+        </main>
+    </body>
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/logo-hover.js' %}"></script>
+</html>
