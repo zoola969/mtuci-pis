@@ -135,6 +135,27 @@ h1.post-title {
 .one-post {
 	margin-bottom: 60px;
 	clear: both;
+	position: relative;
+}
+
+.one-post.folded .article-info,
+.one-post.folded .article-text,
+.one-post.folded .article-author,
+.one-post.folded .article-created-date {
+	display: none;
+}
+
+.fold-button {
+	background: none;
+	border: none;
+	color: #ffffff;
+	text-decoration: underline;
+	font-size: 16px;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 5px;
+	padding: 0;
 }
 
 .create-post-page h1.post-title {

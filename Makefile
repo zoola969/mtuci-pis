@@ -6,3 +6,4 @@ mypy:
 	cd lab4/blog && mypy blog
 	cd lab5/blog && mypy blog
 	cd lab6/blog && mypy blog
+	cd lab7/blog && mypy blog
