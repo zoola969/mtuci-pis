@@ -1,0 +1,260 @@
+body {
+	background: #7ed4c2;
+	font-family: Tahoma, Arial, sans-serif;
+	color: #008469;
+	margin: 0;
+}
+
+.header {
+	padding: 5rem 0;
+	background: #b6f3e6;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	overflow: hidden;
+}
+
+.header-logo-container {
+	width: 100%;
+	max-width: 60rem;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 2.5rem;
+}
+
+.header-inner {
+	width: 100%;
+	max-width: 60rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	position: relative;
+}
+
+.header-text-area {
+	flex: 1;
+	max-width: 31.25rem;
+}
+
+.header-title {
+	font-size: 2rem;
+	margin: 0;
+	font-weight: bold;
+}
+
+.header-logo {
+	width: 15.625rem;
+	height: auto;
+}
+
+.header-links {
+	display: flex;
+	gap: 2rem;
+	margin-top: 1.875rem;
+}
+
+.all-articles {
+	color: #008469;
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 1.5rem;
+}
+
+.all-articles:focus-visible {
+	outline: 0.125rem solid #008469;
+	outline-offset: 0.25rem;
+}
+
+.content {
+	background: #49b7a5;
+	width: 100%;
+	padding: 5rem 0;
+	min-height: 25rem;
+}
+
+.content-inner {
+	max-width: 60rem;
+	margin: 0 auto;
+}
+
+.one-post {
+	margin-bottom: 3.75rem;
+	position: relative;
+}
+
+.post-title {
+	border-bottom: 0.125rem solid #008469;
+	padding-bottom: 0.3125rem;
+	margin-bottom: 0.625rem;
+	display: inline-block;
+	font-size: 1.75rem;
+}
+
+.post-title a {
+	color: #008469;
+	text-decoration: none;
+}
+
+.article-info {
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 0.9375rem;
+	font-size: 1rem;
+}
+
+.article-author {
+	font-weight: bold;
+}
+
+.article-created-date {
+	font-style: italic;
+}
+
+.article-text {
+	line-height: 1.6;
+	font-size: 1rem;
+}
+
+.fold-button {
+	background: none;
+	border: none;
+	color: #005f4e;
+	text-decoration: underline;
+	font-size: 0.875rem;
+	cursor: pointer;
+	position: absolute;
+	right: 0;
+	top: 0;
+	min-width: 2.75rem;
+	min-height: 2.75rem;
+}
+
+.fold-button:focus-visible {
+	outline: 0.125rem solid #005f4e;
+	outline-offset: 0.25rem;
+}
+
+.one-post-shadow {
+	position: absolute;
+	inset: 0;
+	background: rgb(0 0 0);
+	z-index: -1;
+	opacity: 0;
+}
+
+.icons-for-parallax {
+	position: relative;
+	width: 20rem;
+	height: 20rem;
+	flex-shrink: 0;
+	align-self: center;
+}
+
+.icons-for-parallax img {
+	position: absolute;
+}
+
+.icon-for-parallax-first {
+	top: 5rem;
+	left: 0;
+	z-index: 3;
+}
+
+.icon-for-parallax-second {
+	top: 2.5rem;
+	left: 3rem;
+	z-index: 2;
+}
+
+.icon-for-parallax-third {
+	top: 0;
+	left: 6rem;
+	z-index: 1;
+}
+
+.one-post.folded .article-info,
+.one-post.folded .article-text,
+.one-post.folded .article-author,
+.one-post.folded .article-created-date {
+	display: none;
+}
+
+.form-group {
+	margin-bottom: 1rem;
+}
+
+.form-group:last-child {
+	display: flex;
+	justify-content: flex-end;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+	width: 100%;
+	padding: 0.9375rem;
+	border: 0.125rem solid #008469;
+	background: rgb(255 255 255 / 0.2);
+	color: #008469;
+	font-size: 1.25rem;
+	box-sizing: border-box;
+	font-family: inherit;
+	transition: background 0.3s;
+	margin-bottom: 0.3125rem;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+textarea:focus {
+	background: rgb(255 255 255 / 0.4);
+	outline: 0.125rem solid #008469;
+	outline-offset: 0.125rem;
+}
+
+textarea {
+	height: 18.75rem;
+	resize: vertical;
+}
+
+input::placeholder,
+textarea::placeholder {
+	color: rgb(0 132 105 / 0.6);
+}
+
+.submit-button {
+	background: #008469;
+	color: #ffffff;
+	border: none;
+	padding: 0.75rem 3.75rem;
+	font-size: 1.25rem;
+	font-weight: bold;
+	cursor: pointer;
+	transition:
+		background 0.3s,
+		transform 0.1s;
+	margin-top: 0.625rem;
+}
+
+.submit-button:focus-visible {
+	outline: 0.125rem solid #ffffff;
+	outline-offset: 0.25rem;
+}
+
+.submit-button:active {
+	transform: translateY(0.125rem);
+}
+
+.submit-button:hover {
+	background: #005f4e;
+}
+
+.errors {
+	margin-top: 1.25rem;
+	padding: 0.625rem;
+	background: #e74c3c;
+	color: #ffffff;
+	border-radius: 0.25rem;
+}

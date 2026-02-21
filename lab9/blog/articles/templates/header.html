@@ -1,0 +1,44 @@
+{% load static %}
+<header class="header">
+    <div class="header-logo-container">
+        <img src="{% static 'img/dpb-logo.png' %}"
+             width="auto"
+             height="auto"
+             alt="Логотип проекта"
+             class="header-logo" />
+    </div>
+    <div class="header-inner">
+        <div class="header-text-area">
+            <div class="header-top">
+                <h1 class="header-title">Коллективный блог</h1>
+            </div>
+            <div class="header-links">
+                <a href="{% url 'archive' %}" class="all-articles">Все статьи</a>
+                {% if user.is_authenticated %}
+                    <a href="{% url 'new_article' %}" class="all-articles">Написать статью</a>
+                    <a href="{% url 'logout' %}" class="all-articles">Выйти</a>
+                {% else %}
+                    <a href="{% url 'register' %}" class="all-articles">Регистрация</a>
+                    <a href="{% url 'login' %}" class="all-articles">Вход</a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="icons-for-parallax">
+            <img src="{% static 'img/secret-doc.png' %}"
+                 alt="секретный документ"
+                 class="icon-for-parallax-third"
+                 width="150px"
+                 height="auto" />
+            <img src="{% static 'img/secret-doc.png' %}"
+                 class="icon-for-parallax-second"
+                 alt="секретный документ"
+                 width="175px"
+                 height="auto" />
+            <img src="{% static 'img/secret-doc.png' %}"
+                 class="icon-for-parallax-first"
+                 alt="секретный документ"
+                 width="200px"
+                 height="auto" />
+        </div>
+    </div>
+</header>

@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Django Public Blog - создать статью{% endblock %}
+{% block description %}Страница создания новой статьи в блоге.{% endblock %}
+{% block keywords %}блог, создать статью, новая публикация{% endblock %}
+{% block body_class %}create-post-page{% endblock %}
+{% block content %}
+    <h1 class="post-title">Написать статью</h1>
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="text"
+                   name="title"
+                   placeholder="Название статьи"
+                   value="{{ form.title|default:'' }}">
+        </div>
+        <div class="form-group">
+            <textarea name="text" placeholder="Текст статьи">{{ form.text|default:'' }}</textarea>
+        </div>
+        <div class="form-group">
+            <input type="submit" value="Сохранить" class="submit-button">
+        </div>
+    </form>
+    {% if form.errors %}
+        <div class="errors">{{ form.errors }}</div>
+    {% elif form.error %}
+        <div class="errors">{{ form.error }}</div>
+    {% endif %}
+{% endblock %}
